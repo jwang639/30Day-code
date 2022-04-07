@@ -1,0 +1,35 @@
+- Primitive data(not modifiable) types are compared by its values. 
+
+- Non-primitive data types are modifiable or mutable, do not compare non-primitive data types(arrays, objects, etc)
+
+- Math Object:
+    * console.log(Math.round(PI))                // 3 to round values to the nearest number
+    * console.log(Math.round(9.81))              // 10
+    * console.log(Math.floor(PI))                // 3 rounding down
+    * console.log(Math.ceil(PI))                 // 4 rounding up
+    * const randNum = Math.random() // creates random number between 0 to 0.999999
+
+- Strings:  
+    * If the string length is too big it does not fit in one line, We can use the backslash character (\) 
+    at the end of each line to indicate that the string will continue on the next line
+    * Escape Sequences in Strings, \n: new line, \t: Tab, means 8 spaces
+
+- Template Literals (Template Strings): `String literal text ${expression}`
+    let a = 2
+    let b = 3
+    console.log(`The sum of ${a} and ${b} is ${a + b}`) 
+
+    let c = 2
+    let d = 3
+    console.log(`${c} is greater than ${d}: ${c > d}`)
+
+
+- String has a lot of properties, string.concat(), string.includes(), etc
+
+- Data Type Casting:
+    String to Int: parseInt(), Number()
+
+- Remember how to use regular expression! it is really useful with using replace() or match()
+    check the regex cheat sheet if forgot
+
+- 

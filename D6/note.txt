@@ -1,0 +1,13 @@
+- break is used to interrupt a loop
+    if break used in a for loop, will interrupt the for loop when break is executed
+
+- continue is used to skip a certain iterations
+    if break used in a for loop, will skip the certain iteration in for loop when continue is executed
+
+- use back-ticks (``) rather than the quotes ("") to define a String
+    With template literals, you can use both single and double quotes inside a string:
+    let text = `He's often called "Johnny"`;
+
+- 
+
+

@@ -1,0 +1,23 @@
+- create a set from array
+const companies = new Set(array)
+
+- Set is iterable
+
+- set.add(), set.delete()
+
+- check element in set
+set.has()
+
+- clear the set
+set.clear()
+
+- Since each element is unique is set, we can use it to count how many kind of items in an array
+
+- To find a union to two sets can be achieved using spread operator.
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+let c = [...a, ...b]
+
+- use filter() and has() can get the intersection of two sets
+
+- 

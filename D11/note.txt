@@ -1,0 +1,10 @@
+- Destructing Arrays, unpack {arrays, and objects} and assigning to a distinct variable
+
+- If we like to skip on of the values in the array we use additional comma.
+    const numbers = [1, 2, 3]
+    let [numOne, , numThree] = numbers //2 is omitted
+
+- spread operator(...)
+We can not assign variable to all the elements in the array, can get the remaining as array using spread operator(...)
+
+- 

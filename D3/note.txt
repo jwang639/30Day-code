@@ -1,0 +1,22 @@
+- NaN means not a number, but the type of NaN is number. NaN is not equal to NaN or any number
+
+- Operator ** means exponential
+
+- pre-increment: ++i VS post-increment: i++
+    pre means increase by 1 firstly and use the value; post mean you use the current value of i, then increase by 1
+
+-  Ternary Operators allows you to write a condition, memorize the syntax below:
+    
+    let number = 5
+        number > 0
+        ? console.log(`${number} is a positive number`)
+        : console.log(`${number} is a negative number`)
+        number = -5
+
+        number > 0
+        ? console.log(`${number} is a positive number`)
+        : console.log(`${number} is a negative number`)
+    ****out put: 5 is a positive number******
+               5 is a negative number     
+
+-  

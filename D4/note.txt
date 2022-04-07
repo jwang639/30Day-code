@@ -1,0 +1,7 @@
+- if else statement
+
+- Memorize how to use switch statement:
+    remember the switch expression is compared with cases' result!!
+    try to reread this each time watching this note, easily to forget
+
+- 

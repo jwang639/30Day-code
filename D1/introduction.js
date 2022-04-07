@@ -1,0 +1,1 @@
+console.log("JS is added by external method")

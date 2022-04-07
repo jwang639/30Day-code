@@ -1,0 +1,15 @@
+- Anonymous function or without name
+    const anonymousFun = function() {}
+
+- Self invoking functions are anonymous functions which do not need to be called to return a value.
+
+- Arrow Function
+
+- Function with default parameters, if we do not pass an argument the default will be used
+
+- Variables declared by var keyword are scoped to the immediate function body (hence the function scope) 
+  while let variables are scoped to the immediate enclosing block denoted by { } (hence the block scope)
+
+- to generate a random string, use a long string contains A-Z and use math random to pick letter
+
+- 

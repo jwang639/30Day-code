@@ -1,0 +1,39 @@
+- TWO ways to create array:
+    1. use constructor: const arr = Array()
+    2. use brackets: const arr1 = []
+    3. create array using split
+
+- Array can have items of different data types
+    const arr = ['ABS', 250, true, ]
+
+- Create array with Array().fll()
+
+- Check index of element, array.indexOf()
+    can be used to check if element existed
+
+- lastIndexOf: gives the position of the last item in the array
+
+- Array.isArray:To check if the data type is an array
+    typeof array will return object, should use .isArray to check
+- toString:Converts array to string
+
+- join method will return array as string
+    also can be used to add the argument to array and return as string
+
+- slice can cut the array and return the array after cut
+    take starting and ending position 
+
+- splice can be used to remove elements
+    three parameters:Starting position, number of times to be removed and number of items to be added.
+
+- Push: adding item in the end
+
+- pop: Removing item in the end.
+
+- shift: Removing one array element in the beginning of the array.
+
+- unshift: Adding array element in the beginning of the array.
+
+- The toUpperCase() method does not change the original string.
+
+- 
