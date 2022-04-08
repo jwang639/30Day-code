@@ -1,16 +1,11 @@
-//change the tasks status
-const ulList = document.querySelectorAll("li")
-ulList.forEach(ul =>{
-    if(ul.textContent.includes("Challenge Done")){
-        ul.style.background = 'green'
-    }
-    else if(ul.textContent.includes("Challenge Ongoing")){
-        ul.style.background = 'yellow'
-    }
-    else if(ul.textContent.includes("Challenge Coming")){
-        ul.style.background = 'red'
-    }
-})
+//change the year color in title
+function changeTitle(){
+    document.querySelector('h1').style.color = changeColor()
+    let t = setTimeout(function(){
+        changeTitle()
+    }, 1000)
+}
+changeTitle()
 
 
 //real time clock
@@ -55,15 +50,9 @@ function currentTime(){
         break;
     }
     
-    let colorPool = ['green', 'red', 'blue', 'black', 'white', 'pink', 'purple', 'yellow', 'brown', 'grey']
-    function changeColor(){
-       let colorIndex = Math.floor(Math.random() * 10)
-       return colorIndex 
-    }
-
     let time = `${month} ${date}, ${year} ${hour}:${mins}:${seconds}`
     document.querySelector('clock').innerText = time
-    document.querySelector('clock').style.background = colorPool[changeColor()]
+    document.querySelector('clock').style.background = changeColor()
     
     //use timeout function to update every second
     let t = setTimeout(function(){
@@ -71,3 +60,28 @@ function currentTime(){
     }, 1000)
 }
 currentTime()
+
+
+//change the tasks status
+const ulList = document.querySelectorAll("li")
+ulList.forEach(ul =>{
+    if(ul.textContent.includes("Challenge Done")){
+        ul.style.background = 'green'
+    }
+    else if(ul.textContent.includes("Challenge Ongoing")){
+        ul.style.background = 'yellow'
+    }
+    else if(ul.textContent.includes("Challenge Coming")){
+        ul.style.background = 'red'
+    }
+})
+
+
+//randomly change color 
+function changeColor(){
+    let colorPool = ['green', 'red', 'blue', 'black', 'white', 'pink', 'purple', 'yellow', 'brown', 'grey']
+    let colorIndex = Math.floor(Math.random() * 10)
+    return colorPool[colorIndex] 
+}
+
+
