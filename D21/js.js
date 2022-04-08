@@ -66,6 +66,8 @@ function currentTime(){
     document.querySelector('clock').style.background = colorPool[changeColor()]
     
     //use timeout function to update every second
-    let t = setTimeout(function(){currentTime()}, 1000)
+    let t = setTimeout(function(){
+        currentTime()
+    }, 1000)
 }
 currentTime()
