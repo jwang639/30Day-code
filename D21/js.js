@@ -1,44 +1,71 @@
-// // let firstTitle = document.querySelector('h1') // select the first available h2 element
-// // let firstTitle1 = document.querySelector('#first-title') // select id with first-title
-// // let firstTitle2 = document.querySelector('.title') // select the first available h2 element with class title
-// // console.log(firstTitle);
-// // console.log(firstTitle1);
-// // console.log(firstTitle2);
-
-// const titles = document.querySelectorAll('h1')
-// //another way to setting an attribute
-// titles[3].className = 'title'
-// titles[3].id = 'fourth-title'
-// //another way to setting an attribute: append the class, doesn't over ride
-// titles[3].classList.add('title', 'header-title')
-
-// //const titles = document.querySelectorAll('h1')
-// titles[3].textContent = 'Fourth Title'
-
-// //allTitles.forEach(title => console.log(title))
-// //const allTitles = document.querySelectorAll('.title') // the same goes for selecting using class
-
-// console.log(titles[3]);
+//change the tasks status
+const ulList = document.querySelectorAll("li")
+ulList.forEach(ul =>{
+    if(ul.textContent.includes("Challenge Done")){
+        ul.style.background = 'green'
+    }
+    else if(ul.textContent.includes("Challenge Ongoing")){
+        ul.style.background = 'yellow'
+    }
+    else if(ul.textContent.includes("Challenge Coming")){
+        ul.style.background = 'red'
+    }
+})
 
 
-// const lists = `
-//     <li>30DaysOfPython Challenge Done</li>
-//             <li>30DaysOfJavaScript Challenge Ongoing</li>
-//             <li>30DaysOfReact Challenge Coming</li>
-//             <li>30DaysOfFullStack Challenge Coming</li>
-//             <li>30DaysOfDataAnalysis Challenge Coming</li>
-//             <li>30DaysOfReactNative Challenge Coming</li>
-//             <li>30DaysOfMachineLearning Challenge Coming</li>`
-//   const ul = document.querySelector('ul')
-//   ul.innerHTML = lists
+//real time clock
+function currentTime(){
+    const today = new Date()
+    let date = today.getDate()
+    let month = today.getMonth()
+    let year = today.getFullYear()
+    let hour = today.getHours()
+    let mins =today.getMinutes()
+    let seconds = today.getSeconds()
 
+    hour = (hour < 10)? '0' + hour : hour
+    mins = (mins < 10)? '0' + mins : mins
+    seconds = (seconds < 10)? '0' + seconds : seconds
 
-// const firstElements = document.querySelector('h1')
-// const secondWay = document.querySelector('#third-title')
-// console.log(firstElements);
-// console.log(secondWay);
+    //change month to actual word
+    switch(month){
+        case 1: month = 'January'
+        break;
+        case 2: month = 'February'
+        break;
+        case 3: month = 'March'
+        break;
+        case 4: month = 'April'
+        break;
+        case 5: month = 'May'
+        break;
+        case 6: month = 'June'
+        break;
+        case 7: month = 'July'
+        break;
+        case 8: month = 'August'
+        break;
+        case 9: month = 'September'
+        break;
+        case 10: month = 'October '
+        break;
+        case 11: month = 'November'
+        break;
+        case 12: month = 'December'
+        break;
+    }
+    
+    let colorPool = ['green', 'red', 'blue', 'black', 'white', 'pink', 'purple', 'yellow', 'brown', 'grey']
+    function changeColor(){
+       let colorIndex = Math.floor(Math.random() * 10)
+       return colorIndex 
+    }
 
-const ulList = document.getElementsByTagName('ul')
-for(element of ulList){
-    element.style.color = 'green'
+    let time = `${month} ${date}, ${year} ${hour}:${mins}:${seconds}`
+    document.querySelector('clock').innerText = time
+    document.querySelector('clock').style.background = colorPool[changeColor()]
+    
+    //use timeout function to update every second
+    let t = setTimeout(function(){currentTime()}, 1000)
 }
+currentTime()
