@@ -1,8 +1,8 @@
-const button = document.querySelector('button')
-const input = document.querySelector('input')
-const errorMessage = document.querySelector('p')
-const div = document.querySelector('div')
-
+const button = document.querySelector('button') //create button
+const input = document.querySelector('input')   //create input field
+const errorMessage = document.querySelector('p')//create error message field
+const div = document.querySelector('div')//create numbers field
+//for click event
 button.addEventListener('click', () =>{
     let regex = /^[a-zA-Z]+$/
     if(input.value.match(regex)){
@@ -18,7 +18,7 @@ button.addEventListener('click', () =>{
         createNumbers()    //generate the number grid  
     }
 })
-
+//create numbers by input
 function createNumbers(){
     div.innerHTML = ''
     const row = document.createElement('row')
@@ -44,7 +44,7 @@ function createNumbers(){
     }
     div.appendChild(row)
 }
-
+//prime
 function isPrime(num){
     if(num <= 1) return false
     if(num ==2) return true
@@ -60,11 +60,11 @@ function isPrime(num){
         return true
     }
 }
-
+//odd
 function isOdd(num){
     if(num % 2 != 0) return true
 }
-
+//even
 function isEven(num){
     if(num % 2 == 0) return true
 }
